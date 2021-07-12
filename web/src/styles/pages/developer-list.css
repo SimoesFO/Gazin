@@ -1,0 +1,76 @@
+#page-create-developer {
+  display: flex;
+}
+
+#page-create-developer main {
+  flex: 1;
+}
+
+.create-developer-form {
+  width: 700px;
+  margin: 64px auto;
+
+  background: #FFFFFF;
+  border: 1px solid #D3E2E5;
+  border-radius: 20px;
+
+  padding: 64px 80px;
+
+  overflow: hidden;
+}
+
+
+.create-developer-form fieldset {
+  border: 0;
+}
+
+
+.create-developer-form fieldset legend {
+  width: 100%;
+
+  font-size: 32px;
+  line-height: 34px;
+  color: #5C8599;
+  font-weight: 700;
+
+  border-bottom: 1px solid #D3E2E5;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  
+}
+
+.create-developer-form .btn-novo {
+  width: 100px;
+  height: 50px;
+  border: 0;
+  cursor: pointer;
+  background: #3CDC8C;
+  border-radius: 20px;
+  color: #FFFFFF;
+  font-weight: 800;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: background-color 0.2s;
+}
+
+.create-developer-form .btn-novo:hover {
+  background: #36CF82;
+}
+
+.create-developer-form table {
+  margin-top: 20px;
+  color: #5C8599;
+  border-collapse: collapse;
+}
+
+.create-developer-form th, td {
+  border: 2px solid #DDD;
+  padding: 3px 5px;
+}
+
+.create-developer-form th {
+  background: #EEE;
+}
