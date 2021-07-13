@@ -7,7 +7,7 @@
 }
 
 .create-developer-form {
-  width: 700px;
+  width: 800px;
   margin: 64px auto;
 
   background: #FFFFFF;
@@ -37,6 +37,11 @@
   padding-bottom: 20px;
   margin-bottom: 20px;
   
+}
+
+.create-developer-form fieldset .actions {
+  display: flex;
+  justify-content: right;
 }
 
 .create-developer-form .btn-novo {
@@ -69,7 +74,7 @@
 
 .create-developer-form th, td {
   border: 2px solid #DDD;
-  padding: 3px 5px;
+  padding: 5px 5px;
 }
 
 .create-developer-form th {

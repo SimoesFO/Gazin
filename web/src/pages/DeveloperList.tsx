@@ -45,13 +45,15 @@ export default function DeveloperList() {
       <main>
         <div className="create-developer-form">
           <fieldset>
-            <legend>Gazin List - Processo Seletivo</legend>
+            <legend>teste</legend>
 
-            <Link to="/developer" className="btn-novo">
-              Novo
-            </Link>
+            <div className='actions'>
+              <Link to="/developer" className="btn-novo">
+                Novo
+              </Link>
+            </div>
 
-            <table>
+            <table width='100%'>
               <thead>
                 <tr>
                   <th>Nome</th>

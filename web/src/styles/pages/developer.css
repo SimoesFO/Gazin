@@ -7,7 +7,7 @@
 }
 
 form.create-developer-form {
-  width: 700px;
+  width: 800px;
   margin: 64px auto;
 
   background: #FFFFFF;
@@ -103,4 +103,20 @@ form.create-developer-form button.confirm-button {
 
 form.create-developer-form button.confirm-button:hover {
   background: #36CF82;
+}
+
+
+form.create-developer-form .input-block select {
+  width: 100%;
+  background: #F5F8FA;
+  border: 1px solid #D3E2E5;
+  border-radius: 20px;
+  outline: none;
+  color: #5C8599;
+  height: 64px;
+  padding: 0 16px;
+
+  background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #F5F8FA;
+  -webkit-appearance: none;
+  background-position-x: 95%;
 }
