@@ -44,10 +44,11 @@
   height: 50px;
   border: 0;
   cursor: pointer;
-  background: #3CDC8C;
+  background: #2a91e6;
   border-radius: 20px;
   color: #FFFFFF;
   font-weight: 800;
+  text-decoration: none;
 
   display: flex;
   justify-content: center;
@@ -57,7 +58,7 @@
 }
 
 .create-developer-form .btn-novo:hover {
-  background: #36CF82;
+  background: #1773be;
 }
 
 .create-developer-form table {
@@ -73,4 +74,50 @@
 
 .create-developer-form th {
   background: #EEE;
+}
+
+.create-developer-form .btn-remove {
+  width: 70px;
+  height: 25px;
+  border: 0;
+  cursor: pointer;
+  background: #f77272;
+  border-radius: 10px;
+  color: #FFFFFF;
+  font-weight: 800;
+  text-decoration: none;
+  font-size: 0.8rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: background-color 0.2s;
+}
+
+.create-developer-form .btn-remove:hover {
+  background: #f35f5f;
+}
+
+.create-developer-form .btn-edit {
+  width: 70px;
+  height: 25px;
+  border: 0;
+  cursor: pointer;
+  background: #3CDC8C;
+  border-radius: 10px;
+  color: #FFFFFF;
+  font-weight: 800;
+  text-decoration: none;
+  font-size: 0.8rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: background-color 0.2s;
+}
+
+.create-developer-form .btn-edit:hover {
+  background: #36CF82;
 }

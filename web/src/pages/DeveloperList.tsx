@@ -26,6 +26,20 @@ export default function DeveloperList() {
       });
   }, []);
 
+  async function removeDeveloper(id: string) {
+    console.log(id);
+
+    api.delete(`developers/${id}`)
+      .then(res => {
+        api.get('developers')
+          .then(res => {
+            setDeveloper(res.data);
+          });
+
+        alert('Developer removed!')
+      });
+  }
+
   return (
     <div id="page-create-developer">
       <main>
@@ -59,8 +73,16 @@ export default function DeveloperList() {
                         <td>{ dev.age }</td>
                         <td>{ dev.birthdayDescription }</td>
                         <td>{ dev.hobby }</td>
-                        <td>Editar</td>
-                        <td>Excluir</td>
+                        <td>
+                          <Link to={`/developer/${dev.id}`} className="btn-edit">
+                            Editar
+                          </Link>
+                        </td>
+                        <td>
+                          <button className="btn-remove" onClick={ () => removeDeveloper(dev.id) }>
+                            Excluir
+                          </button>
+                        </td>
                       </tr>
                     )
                   })

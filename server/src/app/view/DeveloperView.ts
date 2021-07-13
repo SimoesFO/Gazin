@@ -12,7 +12,10 @@ export default {
       age: dev?.age,
       hobby: dev?.hobby,
       birthday: dev.birthday,
-      birthdayDescription: format(dev.birthday, 'dd/MM/yyyy'),
+      birthdayDescription:
+        typeof dev.birthday === 'string'
+          ? (dev.birthday as string).split('-').reverse().join('/')
+          : format(dev.birthday, 'dd/MM/yyyy'),
       createdAt: dev.createdAt
         ? format(dev.createdAt, 'yyyy-MM-dd HH:mm:ss')
         : dev.createdAt,
