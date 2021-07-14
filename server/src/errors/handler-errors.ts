@@ -38,7 +38,7 @@ const errorHandler: ErrorRequestHandler = (error, req, res, next) => {
   const date = format(new Date(), 'yyyyMMddHHmmss_T');
   const contentError = error.stack.toString();
   fs.writeFileSync(
-    path.join(__dirname, 'files', `${date}_error.txt`),
+    path.join(__dirname, 'files', `${date}_error.log`),
     contentError,
   );
 

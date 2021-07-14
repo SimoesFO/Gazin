@@ -22,7 +22,7 @@ export default function DeveloperList() {
   useEffect(() => {
     api.get('developers')
       .then(res => {
-        setDeveloper(res.data);
+        setDeveloper(res.data.data);
       });
   }, []);
 
@@ -45,7 +45,7 @@ export default function DeveloperList() {
       <main>
         <div className="create-developer-form">
           <fieldset>
-            <legend>teste</legend>
+            <legend>Gazin - Processo seletivo</legend>
 
             <div className='actions'>
               <Link to="/developer" className="btn-novo">

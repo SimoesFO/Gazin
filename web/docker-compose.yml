@@ -7,6 +7,7 @@ services:
       dockerfile: ./.docker/node/Dockerfile
     container_name: react-node-container
     restart: always
+    stdin_open: true
     ports:
       - $APP_PORT:$APP_PORT
     # For production, comment all volumes

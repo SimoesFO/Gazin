@@ -1,12 +1,12 @@
 FROM node:alpine
 
 RUN apk update; apk upgrade;
-RUN apk add bash
+RUN apk add bash yarn
 
 WORKDIR /usr/app/
 
 COPY package.json ./
-RUN npm install
+RUN yarn install
 
 COPY ./ ./
 

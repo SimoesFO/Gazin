@@ -1,9 +1,9 @@
-FROM node
+FROM node:alpine
 
-#RUN apk update; apk upgrade;
-#RUN apk add bash
+RUN apk update; apk upgrade;
+RUN apk add bash
 
-WORKDIR /app/
+WORKDIR /app
 
 COPY package.json ./
 RUN npm install

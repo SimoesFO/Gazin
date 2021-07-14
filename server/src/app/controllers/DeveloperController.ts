@@ -12,17 +12,17 @@ export default {
     const { limit, start } = req.query as IQueryParams;
 
     const pagination: IPagination = {
-      take: limit || 10,
+      take: limit || 50,
       skip: start || 0,
     };
 
     const repository = getCustomRepository(DeveloperRepository);
-    const devs = await repository.find(pagination);
+    const [devs, total] = await repository.findAndCount(pagination);
 
-    if (devs.length === 0)
+    if (total === 0)
       return res.status(404).json({ message: 'Developers not found.' });
 
-    return res.json(DeveloperView.renderMany(devs));
+    return res.json({ total, data: DeveloperView.renderMany(devs) });
   },
 
   async show(req: Request, res: Response): Promise<Response> {

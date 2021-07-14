@@ -97,7 +97,7 @@ export default function Developer() {
       <main>
         <form onSubmit={handleSubmit} className="create-developer-form">
           <fieldset>
-            <legend>Teste</legend>
+            <legend>Gazin - Processo Seletivo</legend>
 
             <div className="input-block">
               <label htmlFor="name">Nome</label>

@@ -12,9 +12,14 @@ services:
     # For production, comment all volumes
     volumes:
       - ./:/usr/app
-    command: npm run dev # For production, change to 'npm start'
+    #command: yarn typeorm migration:run # npm run dev # For production, change to 'npm start'
+    command: bash -c "
+        yarn typeorm migration:run
+        && npm run dev"
     networks:
       - api-jwt-postgres-network
+    depends_on:
+      - api-jwt-postgres-service
 
   api-jwt-postgres-service:
     image: postgres
@@ -30,20 +35,6 @@ services:
       POSTGRES_DB: $DB_DATABASE
       POSTGRES_USER: $DB_USER
       POSTGRES_PASSWORD: $DB_PASSWORD
-
-  api-jwt-pgadmin-service:
-    image: dpage/pgadmin4
-    container_name: api-jwt-pgadmin-container
-    restart: always
-    environment:
-      PGADMIN_DEFAULT_EMAIL: $PGADMIN_DEFAULT_EMAIL
-      PGADMIN_DEFAULT_PASSWORD: $PGADMIN_DEFAULT_PASSWORD
-    ports:
-      - 16543:80
-    networks:
-      - api-jwt-postgres-network
-    depends_on:
-      - api-jwt-postgres-service
 
 networks:
   api-jwt-postgres-network:
